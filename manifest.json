@@ -1,0 +1,33 @@
+//first content script practice for chrome extensino
+
+//changes the words on the screen after the page has loaded
+
+{
+
+	"name": "Word Changer",
+	"version": "1.0",
+	"manifest_version": 2,
+
+	"description": "A subtle word changer so you don't have to.",
+
+	"icons": {
+		"128": "icons/cencorship-icon-128.png"
+
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+
+			"js": [
+				"content.js"
+			],
+
+			"run_at": "document_end"
+		}
+
+	]
+
+}
